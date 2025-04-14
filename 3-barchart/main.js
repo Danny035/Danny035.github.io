@@ -122,7 +122,7 @@ d3.csv("Combined_crash.csv").then(data => {
     .attr("y", d => y(d.count))
     .attr("width", x.bandwidth())
     .attr("height", d => height - y(d.count))
-    .attr("fill", "tomato");
+    .attr("fill", "#001f3f");
 
   // Add labels above each bar
   svg.selectAll(".label")
@@ -144,3 +144,4 @@ d3.csv("Combined_crash.csv").then(data => {
     .style("font-weight", "bold")
     .text("Total Crash Count");
 });
+
