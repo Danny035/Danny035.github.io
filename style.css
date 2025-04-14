@@ -1,0 +1,219 @@
+/* Navigation bar customization */
+.navbar {
+    background-color: #f4fffd; 
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.nav-item {
+    padding: 0 10px; 
+}
+
+.nav-link {
+    color: #333; 
+}
+
+body {
+  font-size: 17px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p, li, span {
+  font-size: 1.1em;
+}
+
+
+.activeBlock{
+    color:#000;
+    text-decoration: none;
+  }
+  .activeBlock:hover{
+    color:#000;
+    text-decoration:underline;
+  }
+  .textBlock{
+    padding-left: 50px;
+    padding-top:50px;
+  }
+  .data{
+    background-color: #f4fffd; /* light grey */
+    margin-top: 20px;
+  }
+  .visualizations{
+    background-color: #f4fffd; /* light grey */
+    margin-top: 20px;
+  }
+  .summary{
+    background-color: #f4fffd; /* light grey */
+    margin-top: 20px;
+  }
+  .overview{
+    background-color: #f4fffd; /* light grey */
+    margin-top: 20px;
+  }
+  .attribute{
+    background-color: #f4fffd; /* light grey */
+    margin-top: 20px;
+  }
+  .source{
+    background-color: #f4fffd; /* light grey */
+    margin-top: 20px;
+  }
+  .suitable{
+    background-color: #f4fffd; /* light grey */
+    margin-top: 20px;
+  }
+  .insight{
+    background-color: #f4fffd; /* light grey */
+    margin-top: 20px;
+  }
+  .conclusions{
+    background-color: #f4fffd; /* light grey */
+    margin-top: 20px;
+  }
+  .recommendations{
+    background-color: #f4fffd; /* light grey */
+    margin-top: 20px;
+  }
+  .future{
+    background-color: #f4fffd; /* light grey */
+    margin-top: 20px;
+  }
+
+
+.viz-container_1 {
+  background-color: #f4fffd;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  margin: 60px auto;
+  padding: 40px 50px;
+  width: 98%;
+  max-width: 1200px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}.viz-container_1 iframe {
+  width: 100%;
+  height: 920px; 
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}.viz-container1 p {
+  margin-top: 0;
+  color: #444;
+  font-size: 1.05em;
+}
+
+.viz-container2 {
+  background-color: #f4fffd;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  margin: 60px auto;
+  padding: 40px 50px;
+  width: 98%;
+  max-width: 1200px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}.viz-container2 iframe {
+  width: 100%;
+  height: 770px; 
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}.viz-container2 p {
+  margin-top: 0;
+  color: #444;
+  font-size: 1.05em;
+}
+
+.viz-container3 {
+  background-color: #f4fffd;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  margin: 60px auto;
+  padding: 40px 50px;
+  width: 98%;
+  max-width: 1200px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}.viz-container3 iframe {
+  width: 100%;
+  height: 850px; 
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}.viz-container3 p {
+  margin-top: 0;
+  color: #444;
+  font-size: 1.05em;
+}
+
+.viz-container4 {
+  background-color: #f4fffd;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  margin: 60px auto;
+  padding: 40px 50px;
+  width: 98%;
+  max-width: 1200px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}.viz-container4 iframe {
+  width: 100%;
+  height: 780px; 
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}.viz-container4 p {
+  margin-top: 0;
+  color: #444;
+  font-size: 1.05em;
+}
+
+.viz-container5 {
+  background-color: #f4fffd;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  margin: 60px auto;
+  padding: 40px 50px;
+  width: 98%;
+  max-width: 1200px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}.viz-container5 iframe {
+  width: 100%;
+  height: 850px; 
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}.viz-container5 p {
+  margin-top: 0;
+  color: #444;
+  font-size: 1.05em;
+}
+
+.viz-container6 {
+  background-color: #f4fffd;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  margin: 60px auto;
+  padding: 40px 50px;
+  width: 98%;
+  max-width: 1200px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}.viz-container6 iframe {
+  width: 100%;
+  height: 600px; 
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}.viz-container6 p {
+  margin-top: 0;
+  color: #444;
+  font-size: 1.05em;
+}
+

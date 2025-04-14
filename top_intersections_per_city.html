@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "vconcat": [{"data": {"name": "data-ad4669296c0ee21052a5043f15b26daa"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "At_Roadway_Intersection", "type": "nominal"}, {"field": "Crash_Count", "type": "quantitative"}], "x": {"field": "Crash_Count", "title": "Number of Crashes", "type": "quantitative"}, "y": {"field": "At_Roadway_Intersection", "sort": "-x", "title": "Intersection", "type": "nominal"}}, "height": 200, "title": "Top 5 Intersections in BOSTON", "width": 500}, {"data": {"name": "data-90664967f5238fa1a3e3c2e513861d13"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "At_Roadway_Intersection", "type": "nominal"}, {"field": "Crash_Count", "type": "quantitative"}], "x": {"field": "Crash_Count", "title": "Number of Crashes", "type": "quantitative"}, "y": {"field": "At_Roadway_Intersection", "sort": "-x", "title": "Intersection", "type": "nominal"}}, "height": 200, "title": "Top 5 Intersections in CAMBRIDGE", "width": 500}, {"data": {"name": "data-f6ad7864d5f80fb5c17e148dd1f3e2c4"}, "mark": {"type": "bar"}, "encoding": {"tooltip": [{"field": "At_Roadway_Intersection", "type": "nominal"}, {"field": "Crash_Count", "type": "quantitative"}], "x": {"field": "Crash_Count", "title": "Number of Crashes", "type": "quantitative"}, "y": {"field": "At_Roadway_Intersection", "sort": "-x", "title": "Intersection", "type": "nominal"}}, "height": 200, "title": "Top 5 Intersections in SOMERVILLE", "width": 500}], "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-ad4669296c0ee21052a5043f15b26daa": [{"City_Town_Name": "BOSTON", "At_Roadway_Intersection": "LOGAN AIRPORT TERMINAL B", "Crash_Count": 107}, {"City_Town_Name": "BOSTON", "At_Roadway_Intersection": "KOSCIUSZKO CIRCLE Rte UNKNOW", "Crash_Count": 87}, {"City_Town_Name": "BOSTON", "At_Roadway_Intersection": "RAMP-RTS 90 WB/1A SB TO RTS 93 NB/3 NB", "Crash_Count": 83}, {"City_Town_Name": "BOSTON", "At_Roadway_Intersection": "STORROW DRIVE", "Crash_Count": 77}, {"City_Town_Name": "BOSTON", "At_Roadway_Intersection": "WILLIAM T MORRISSEY BOULEVARD", "Crash_Count": 75}], "data-90664967f5238fa1a3e3c2e513861d13": [{"City_Town_Name": "CAMBRIDGE", "At_Roadway_Intersection": "MEMORIAL DRIVE", "Crash_Count": 20}, {"City_Town_Name": "CAMBRIDGE", "At_Roadway_Intersection": "ALEWIFE BROOK PARKWAY", "Crash_Count": 15}, {"City_Town_Name": "CAMBRIDGE", "At_Roadway_Intersection": "MASSACHUSETTS AVENUE / GARDEN STREET", "Crash_Count": 12}, {"City_Town_Name": "CAMBRIDGE", "At_Roadway_Intersection": "FRESH POND PARKWAY", "Crash_Count": 10}, {"City_Town_Name": "CAMBRIDGE", "At_Roadway_Intersection": "FRESH POND PARKWAY / HURON AVENUE /", "Crash_Count": 10}], "data-f6ad7864d5f80fb5c17e148dd1f3e2c4": [{"City_Town_Name": "SOMERVILLE", "At_Roadway_Intersection": "ALBION ST / LOWELL ST", "Crash_Count": 17}, {"City_Town_Name": "SOMERVILLE", "At_Roadway_Intersection": "FELLSWAY Rte SR28 S / MYSTIC AVENUE Rte SR38 N", "Crash_Count": 16}, {"City_Town_Name": "SOMERVILLE", "At_Roadway_Intersection": "MYSTIC VALLEY PARKWAY Rte SR16 W / BOSTON AVENUE", "Crash_Count": 14}, {"City_Town_Name": "SOMERVILLE", "At_Roadway_Intersection": "FELLSWAY Rte SR28 S / MYSTIC AVENUE", "Crash_Count": 11}, {"City_Town_Name": "SOMERVILLE", "At_Roadway_Intersection": "RAMP-RT 93 NB TO RT 28 NB/MYSTIC AVE NB", "Crash_Count": 11}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

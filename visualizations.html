@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visualizations - Data Insights Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid justify-content-center">
+                <div class="navbar-collapse collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Data Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="visualizations.html">Visualizations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="summary.html">Summary</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div style="margin-top: 80px;">
+            <!-- Header Section -->
+            <header>
+            </header>
+        </div>
+        
+        <!-- Main Content -->
+
+            <section class="viz-container_1">
+            <h2>Vehicle Crash Analysis</h2>
+            <iframe src="3-barchart/d3_index.html" width="100%" height="700px" style="border:none;"></iframe>
+            <p>The first chart displays the number of reported crashes per 10,000 residents across three cities — Boston, Cambridge, and Somerville. To account for population size differences and allow for fair comparison, we normalized the total crash counts using census population data. Cambridge shows the highest crash rate at 904.9 per 10,000 people, followed by Somerville (604.2), and Boston (508.4). This suggests that while Boston may have more total crashes due to its size, residents in Cambridge experience crashes at a significantly higher rate relative to the population.</p>
+            <p>The second chart to the right presents the total crashes reported in Boston, Cambridge, and Somerville, with no adjustment for population size. It is clear that Boston has the most crashes, followed by Cambridge and then Somerville. This makes sense given Boston’s size, road network, and population is larger and more data is available for Boston compared to Cambridge and Somerville. The counts provide a view of sheer volume, but we cannot determine how frequently each individual might encounter crashes; that is why it is important to see this chart side-by-side with the normalized chart.</p>
+            <div id="scatterPlot1"></div>
+            </section>
+              
+
+            <section class="viz-container2">
+            <h2>Stacked Bar Plot</h2>
+            <iframe src="interactive_crash_severity_blues.html" width="100%" height="200px" style="border:none;"></iframe>
+            <p>This interactive bar chart illustrates the distribution of vehicle crashes across Boston, Cambridge, and Somerville, categorized by injury severity and normalized by population to ensure fair comparison. Injury types were simplified into four main categories—No Injury, Minor Injury, Serious Injury, and Fatal—to reduce redundancy and improve clarity. By adjusting for each city's population (using crashes per 10,000 residents), the chart highlights differences in crash outcomes that aren’t immediately visible through raw counts alone. Users can filter the chart by severity level to explore how the frequency and severity of crashes vary across the three cities, offering insight into relative safety conditions in each area.</p>
+            <div id="Bar Plot"></div>
+            </section>
+
+            <section class="viz-container3">
+            <h2>Crash Flow by City and Severity</h2>
+            <iframe src="sankey_diagram.html" width="100%" height="800px" style="border:none;"></iframe>
+            <p>This Sankey diagram helps reveal how collision type outcomes differ by city not just in frequency but in severity distribution and can be filtered by other collision types using the dropdown. It’s especially useful for identifying whether certain cities experience more severe outcomes for specific crash types, which can inform targeted safety interventions.</p>
+            <div id="Sankey Diagram"></div>
+           </section>
+
+        
+           <section class="viz-container4">
+            <h2>Heatmap: Crash Severity by Weather Condition</h2>
+            <iframe src="heatmap.html" width="100%" height="800px" style="border:none;"></iframe>
+            <p>This heatmap visualizes the relationship between weather conditions and crash severity, with color intensity representing the number of crashes. The darker the cell, the higher the crash count. The chart is also filterable by city, enabling more localized insights.
+Crashes in clear weather dominate across all cities especially those involving property damage only. This suggests most driving (and crashing) happens in normal conditions.
+Cambridge shows relatively higher crash activity in cloudy and rainy conditions compared to Boston and Somerville, indicating weather might have more influence there.
+Snow and icy conditions lead to a more even distribution of crash severity (including non-fatal injuries) in Somerville, suggesting that winter conditions may present greater risk in that city.</p>
+            <div id="scatterPlot2"></div>
+        </section>
+
+        <section class="viz-container5">
+            <h2>High-Risk Intersections in the Boston Metro Area</h2>
+            <iframe src="top_intersections_per_city.html" width="100%" height="800px" style="border:none;"></iframe>
+            <p>This shows us which interactions in Boston, Cambridge, and Somervile have the most crashes so in the future city planners and traffic engineers can prioritize these areas for improved safety measures, such as better signage, traffic signal optimization, or road design changes. Logan Airport Terminal B has most in Boston, Memorial Drive in Cambridge, Albion/Lowell street in Somerville. </p>
+            <div id="scatterPlot2"></div>
+        </section>
+
+        <section class="viz-container6">
+            <h2>Hourly Trends in Crash Types Across Cities</h2>
+            <iframe src="crash_frequency_by_hour.html" width="100%" height="800px" style="border:none;"></iframe>
+            <p>This line chart illustrates the distribution of rear-to-rear vehicle crashes throughout the day in Boston. We observe notable spikes during mid-afternoon and early evening hours, specifically around 3:00 PM and 7:00 PM. These peaks likely correspond to increased traffic volumes during school dismissals and evening commutes. Interestingly, there are also dips during late morning and early evening (e.g., 4:00 PM and 6:00 PM), possibly indicating brief periods of lower congestion. These temporal patterns suggest that traffic management interventions targeting peak hours—such as increased signage, better signal timing, or awareness campaigns—could help reduce crash occurrences during high-risk timeframes.</p>
+            <div id="scatterPlot2"></div>
+        </section>
+
+        
+        
+        <!-- Footer -->
+        <footer class="text-center bg-light py-3">
+            <p>&copy; 2025 Vehicle Crashes in Boston.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Additional scripts can be added for interactive elements -->
+</body>
+</html>
+

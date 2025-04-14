@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-37a9a5a5c2e72d6a4dd5d9caa463cb41"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Simplified_Severity", "scale": {"domain": ["Fatal", "Minor Injury", "No Injury", "Serious Injury"], "scheme": "category10"}, "title": "Injury Severity", "type": "nominal"}, "tooltip": [{"field": "City_Town_Name", "type": "nominal"}, {"field": "Simplified_Severity", "type": "nominal"}, {"field": "Crashes_per_10k", "type": "quantitative"}], "x": {"field": "City_Town_Name", "title": "City/Town Name", "type": "nominal"}, "y": {"field": "Crashes_per_10k", "title": "Crashes per 10,000 Residents", "type": "quantitative"}}, "height": 600, "params": [{"name": "severity_select", "bind": {"input": "select", "options": ["All", "Fatal", "Minor Injury", "No Injury", "Serious Injury"], "name": "Select Severity: "}, "value": "All"}], "title": "Normalized Crash Injury Severity Across Boston Metropolitan Areas", "transform": [{"filter": "((datum.Simplified_Severity === severity_select) || (severity_select === 'All'))"}], "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-37a9a5a5c2e72d6a4dd5d9caa463cb41": [{"City_Town_Name": "BOSTON", "Simplified_Severity": "Fatal", "Crash_Count": 172, "Population": 675647, "Crashes_per_10k": 2.5457080398492113}, {"City_Town_Name": "BOSTON", "Simplified_Severity": "Minor Injury", "Crash_Count": 8329, "Population": 675647, "Crashes_per_10k": 123.27443176688418}, {"City_Town_Name": "BOSTON", "Simplified_Severity": "No Injury", "Crash_Count": 22104, "Population": 675647, "Crashes_per_10k": 327.153084376901}, {"City_Town_Name": "BOSTON", "Simplified_Severity": "Serious Injury", "Crash_Count": 622, "Population": 675647, "Crashes_per_10k": 9.205990702245403}, {"City_Town_Name": "CAMBRIDGE", "Simplified_Severity": "Fatal", "Crash_Count": 16, "Population": 118403, "Crashes_per_10k": 1.3513171118975027}, {"City_Town_Name": "CAMBRIDGE", "Simplified_Severity": "Minor Injury", "Crash_Count": 2183, "Population": 118403, "Crashes_per_10k": 184.37032845451552}, {"City_Town_Name": "CAMBRIDGE", "Simplified_Severity": "No Injury", "Crash_Count": 6113, "Population": 118403, "Crashes_per_10k": 516.2875940643396}, {"City_Town_Name": "CAMBRIDGE", "Simplified_Severity": "Serious Injury", "Crash_Count": 167, "Population": 118403, "Crashes_per_10k": 14.104372355430183}, {"City_Town_Name": "SOMERVILLE", "Simplified_Severity": "Fatal", "Crash_Count": 8, "Population": 81045, "Crashes_per_10k": 0.9871059288049849}, {"City_Town_Name": "SOMERVILLE", "Simplified_Severity": "Minor Injury", "Crash_Count": 1370, "Population": 81045, "Crashes_per_10k": 169.04189030785366}, {"City_Town_Name": "SOMERVILLE", "Simplified_Severity": "No Injury", "Crash_Count": 3287, "Population": 81045, "Crashes_per_10k": 405.57714849774817}, {"City_Town_Name": "SOMERVILLE", "Simplified_Severity": "Serious Injury", "Crash_Count": 77, "Population": 81045, "Crashes_per_10k": 9.500894564747979}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Summary - Data Insights Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid justify-content-center">
+                <div class="navbar-collapse collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Data Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="visualizations.html">Visualizations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="summary.html">Summary</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div style="margin-top: 80px;">
+            <!-- Header Section -->
+            <header>
+                <h1>Summary of Findings</h1>
+            </header>
+        </div>
+        
+        <!-- Main Content -->
+        <article class="insight">
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                  <div class="textBlock">
+                    <h2>Key Insights</h2>
+                    <ul>
+                      <li><strong>Afternoons </strong> have the highest crash frequency, followed by mornings — likely due to traffic volume during commuting hours.</li>
+                      <li><strong>Cambridge</strong> has the highest crash rate per 10,000 residents, suggesting a greater density of incidents relative to population.</li>
+                      <li><strong>Angle and rear-end collisions</strong> are among the most reported, often resulting in non-fatal injuries.</li>
+                      <li>The severity of crashes varies across cities, with <strong> Boston</strong> having the highest count of serious injuries overall.</li>
+                    </ul>
+                  </div>
+                </a>
+                
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <img class="img-fluid" src="/image/key insight.jpg" alt="insight picture">
+              </div>
+            </div>
+          </article>
+      
+          <article class="conclusions">
+            <div class="row" style="display: flex; align-items: stretch;">
+              
+              <!-- Left: Text Content -->
+              <div class="col-md-8 col-sm-12" style="display: flex; flex-direction: column; justify-content: center;">
+                <div class="textBlock">
+                  <h2>Conclusions</h2>
+                  <p>Through our visual analysis of crash data across Boston, Cambridge, and Somerville, several key patterns emerged. Cambridge had the highest number of crashes per 10,000 people, while Boston had the highest rate of fatal crashes, indicating differences not just in volume but also in severity. Our Sankey diagram and heatmaps revealed how crash outcomes vary by weather, time, and type showing, for instance, that property damage crashes dominate across all cities, particularly during clear weather, and that afternoon hours are the most crash-prone time of day.Our interactive line chart also allows users to filter crash trends by hour, type, and city—highlighting how certain crash types spike at specific times, which could help with targeted traffic planning or public awareness.</p>
+                </div>
+              </div>
+          
+              <!-- Right: Full-Height Image -->
+              <div class="col-md-4 col-sm-12" style="height: 100%;">
+                <img class="img-fluid" src="/image/conclusion.png" alt="conclusions picture"
+                     style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+          
+            </div>
+          </article>
+          
+
+          <article class="recommendations">
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                  <div class="textBlock">
+                    <h2>Recommendations</h2>
+                    <ul>
+                      <li>Target High-Crash Intersections for Safety Improvements
+Intersections like Logan Airport Terminal B (Boston), Memorial Drive (Cambridge), and Albion/Lowell Street (Somerville) should be prioritized for interventions such as improved signage, signal timing adjustments, and visibility enhancements to reduce crash frequency.</li>
+                      <li>Increase Enforcement and Safety Messaging During Afternoon Hours
+Since the afternoon (12–6 PM) is consistently the most crash-prone time across all cities, cities should deploy more traffic enforcement, adjust signal timing for congestion relief, and promote awareness campaigns around distracted driving during these hours.</li>
+                      <li>Don’t Underestimate Clear Weather Risk
+Most crashes occur in clear weather, which suggests driver behavior like speeding or multitasking is a bigger factor than weather itself. Cities could introduce driver awareness campaigns focused on staying alert even during “safe” conditions.</li>
+                      
+                    </ul>
+                  </div>
+                </a>
+                
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <img class="img-fluid" src="/image/recommendation.jpg" alt="recommendations picture">
+              </div>
+            </div>
+          </article>
+
+          <article class="future">
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                  <div class="textBlock">
+                    <h2>Future Directions</h2>
+                    <ul>
+                      <li><strong>Incorporate vehicle and driver data</strong> (e.g., vehicle type, driver age, license history) to better understand causes of crashes.</li>
+                      <li><strong>Analyze crash trends over time</strong> using yearly breakdowns to detect long-term changes and policy impacts.</li>
+                      <li><strong>Use predictive modeling</strong> (e.g., machine learning) to identify high-risk zones and forecast future crash likelihoods.</li>
+                      <li><strong>Include road condition data</strong> like lighting, surface quality, and signage visibility to explore environmental risk factors more deeply.</li>
+                    </ul>
+                  </div>
+                </a>
+                
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <img class="img-fluid" src="/image/future.png" alt="future picture">
+              </div>
+            </div>
+          </article>
+        
+        <!-- Footer -->
+        <footer class="text-center bg-light py-3">
+            <p>&copy; 2025 Vehicle Crashes in Boston.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
